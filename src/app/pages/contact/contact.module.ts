@@ -1,22 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-import { AboutRoutingModule } from './about-routing.module';
+import { ContactRoutingModule } from './contact-routing.module';
 
-import { AboutComponent } from './about.component';
+import { ContactComponent } from './contact.component';
 
 @NgModule({
     declarations: [
-        AboutComponent
+        ContactComponent
     ],
     imports: [
         CommonModule,
-        AboutRoutingModule
+        ContactRoutingModule
     ],
     exports: [
-        AboutComponent
+        ContactComponent
     ],
     providers: [],
     bootstrap: []
 })
-export class AboutModule { }
+export class ContactModule { }

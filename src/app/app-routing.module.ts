@@ -9,23 +9,50 @@ const routes: Routes = [
         pathMatch: 'full'
     },
     {
-        path: 'home',
-        data: {
-            id: 'home',
-            displayName: 'Home',
-            link: '/home'
-        },
-        loadChildren: './views/home/home.module#HomeModule'
-    },
-    {
         path: 'about',
         data: {
             id: 'about',
             displayName: 'About',
             link: '/about'
         },
-        loadChildren: './views/about/about.module#AboutModule'
+        loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule)
     },
+    {
+        path: 'contact',
+        data: {
+            id: 'contact',
+            displayName: 'Contact',
+            link: '/contact'
+        },
+        loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule)
+    },
+    {
+        path: 'home',
+        data: {
+            id: 'home',
+            displayName: 'Home',
+            link: '/home'
+        },
+        loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+    },
+    {
+        path: 'portafolio',
+        data: {
+            id: 'portafolio',
+            displayName: 'Portafolio',
+            link: '/portafolio'
+        },
+        loadChildren: () => import('./pages/portafolio/portafolio.module').then(m => m.PortafolioModule)
+    },
+    {
+        path: 'services',
+        data: {
+            id: 'services',
+            displayName: 'Services',
+            link: '/services'
+        },
+        loadChildren: () => import('./pages/services/services.module').then(m => m.ServicesModule)
+    }
 ];
 
 @NgModule({
