@@ -1,0 +1,193 @@
+/* :: Hero Area CSS */
+.hero-area {
+    background-color: #232323;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .hero-area .backEnd-content .dots {
+      position: absolute;
+      right: -200px;
+      top: 50%;
+      z-index: -2;
+      opacity: 0.1;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%); }
+    .hero-area .hero-thumbnail,
+    .hero-area .hero-content {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      min-width: 50%;
+      position: relative;
+      z-index: 1; }
+      @media only screen and (max-width: 767px) {
+        .hero-area .hero-thumbnail,
+        .hero-area .hero-content {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+          min-width: 100%; } }
+    .hero-area .hero-content {
+      height: 880px;
+      padding: 100px 0; }
+      .hero-area .hero-content .line {
+        width: 100px;
+        height: 1px;
+        background-color: #ffffff;
+        margin-bottom: 30px;
+        display: block; }
+      .hero-area .hero-content h2 {
+        color: #ffffff;
+        font-size: 48px;
+        margin-bottom: 25px; }
+        @media only screen and (min-width: 992px) and (max-width: 1199px) {
+          .hero-area .hero-content h2 {
+            font-size: 40px; } }
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+          .hero-area .hero-content h2 {
+            font-size: 30px; } }
+        @media only screen and (max-width: 767px) {
+          .hero-area .hero-content h2 {
+            font-size: 30px; } }
+      .hero-area .hero-content p {
+        color: #ffffff;
+        margin-bottom: 30px; }
+      .hero-area .hero-content.aboutUs {
+        height: 1100px; }
+        @media only screen and (max-width: 767px) {
+          .hero-area .hero-content.aboutUs {
+            height: auto; } }
+      @media only screen and (max-width: 767px) {
+        .hero-area .hero-content {
+          height: auto; } }
+    .hero-area .hero-thumbnail.aboutUs::before {
+      position: absolute;
+      width: 100%;
+      height: 100px;
+      bottom: 0;
+      left: 0;
+      background-color: #ffffff;
+      content: '';
+      z-index: 1; }
+      @media only screen and (max-width: 767px) {
+        .hero-area .hero-thumbnail.aboutUs::before {
+          display: none; } }
+    @media only screen and (max-width: 767px) {
+      .hero-area .hero-thumbnail {
+        height: 400px; } }
+
+
+/* :: Contact Area CSS */
+.contact-form h2 {
+    font-size: 72px;
+    margin-bottom: 15px;
+    font-weight: 100; }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .contact-form h2 {
+        font-size: 55px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .contact-form h2 {
+        font-size: 36px; } }
+    @media only screen and (max-width: 767px) {
+      .contact-form h2 {
+        font-size: 30px; } }
+  .contact-form h4 {
+    font-size: 48px;
+    margin-bottom: 80px; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .contact-form h4 {
+        font-size: 30px; } }
+    @media only screen and (max-width: 767px) {
+      .contact-form h4 {
+        font-size: 24px; } }
+  .contact-form .form-group {
+    margin-bottom: 30px; }
+  .contact-form .form-control {
+    width: 100%;
+    height: 60px;
+    padding: 0 15px;
+    border: none;
+    border-bottom: 1px solid;
+    border-color: #c0c0c0;
+    border-radius: 0;
+    font-size: 12px;
+    font-style: italic;
+    color: #2f2f2f;
+    background-color: transparent; }
+    .contact-form .form-control:focus, .contact-form .form-control:hover {
+      box-shadow: none; }
+  .contact-form textarea {
+    margin-bottom: 50px; }
+    .contact-form textarea.form-control {
+      height: 220px;
+      padding: 15px; }
+
+
+      .sonar-blog-area,
+      .sonar-contact-area {
+        position: relative;
+        z-index: 1;
+        overflow: hidden; }
+        .sonar-blog-area .backEnd-content .dots,
+        .sonar-contact-area .backEnd-content .dots {
+          position: absolute;
+          top: -50px;
+          right: -200px; }
+
+
+
+.bg-img {
+    height: 880px;
+}
+
+
+
+          .sonar-btn {
+            position: relative;
+            z-index: 1;
+            min-width: 180px;
+            height: 66px;
+            border: 1px solid;
+            border-color: #2f2f2f;
+            text-transform: uppercase;
+            color: #2f2f2f;
+            font-size: 12px;
+            letter-spacing: 1px;
+            border-radius: 0;
+            line-height: 64px;
+            padding: 0;
+            background-color: #ffffff; }
+            .sonar-btn:hover, .sonar-btn:focus {
+              background-color: #2f2f2f;
+              font-size: 12px;
+              color: #ffffff; }
+            .sonar-btn.white-btn {
+              border-color: #ffffff;
+              color: #ffffff;
+              background-color: transparent; }
+              .sonar-btn.white-btn:hover, .sonar-btn.white-btn:focus {
+                background-color: #ffffff;
+                color: #2f2f2f; }
+            .sonar-btn.btn-2 {
+              background-color: #2f2f2f;
+              font-size: 12px;
+              color: #ffffff; }
+            .sonar-btn.btn-3 {
+              background-color: #232323;
+              color: #ffffff; }
+              .sonar-btn.btn-3::before {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                border: 1px solid;
+                border-color: #232323;
+                right: -6px;
+                bottom: -6px;
+                content: '';
+                z-index: -100; }
+              .sonar-btn.btn-3:hover, .sonar-btn.btn-3:focus {
+                background-color: #232323;
+                color: #ffffff; }

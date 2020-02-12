@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
     declarations: [
-        NavbarComponent
+        NavbarComponent,
+        FooterComponent
     ],
     imports: [
         CommonModule,
@@ -14,7 +16,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     ],
     exports: [
         NavbarComponent,
-        RouterModule
+        FooterComponent,
+        // RouterModule
     ],
     providers: [],
     bootstrap: []

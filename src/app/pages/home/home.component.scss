@@ -1,0 +1,183 @@
+/* :: Portfolio Area CSS */
+.portfolio-area {
+    overflow-x: hidden; }
+    .portfolio-area .portfolio-title h2 {
+      font-size: 56px;
+      text-align: center;
+      font-weight: 100; }
+      .portfolio-area .portfolio-title h2 span {
+        font-weight: 400; }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .portfolio-area .portfolio-title h2 {
+          font-size: 36px; } }
+      @media only screen and (max-width: 767px) {
+        .portfolio-area .portfolio-title h2 {
+          font-size: 30px; } }
+
+  .single-portfolio-item {
+    position: relative;
+    z-index: 1; }
+    .single-portfolio-item .backend-content .dots {
+      position: absolute;
+      z-index: -1;
+      top: -100px;
+      left: -150px; }
+    .single-portfolio-item .backend-content h2 {
+      position: absolute;
+      font-size: 230px;
+      color: #f0f0f0;
+      z-index: -10;
+      top: -170px;
+      right: 40%; }
+      @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        .single-portfolio-item .backend-content h2 {
+          font-size: 170px;
+          top: -120px; } }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .single-portfolio-item .backend-content h2 {
+          font-size: 80px;
+          top: -50px; } }
+      @media only screen and (max-width: 767px) {
+        .single-portfolio-item .backend-content h2 {
+          font-size: 80px;
+          top: -50px; } }
+    .single-portfolio-item .portfolio-meta {
+      padding-top: 30px; }
+      .single-portfolio-item .portfolio-meta p {
+        font-weight: 500;
+        font-size: 14px;
+        margin-bottom: 5px; }
+      .single-portfolio-item .portfolio-meta h2 {
+        font-size: 30px; }
+        @media only screen and (max-width: 767px) {
+          .single-portfolio-item .portfolio-meta h2 {
+            font-size: 24px; } }
+    .single-portfolio-item.portfolio-item-2 .backend-content .dots {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: auto;
+      right: -150px; }
+    .single-portfolio-item.portfolio-item-3 .backend-content .dots {
+      top: 0;
+      left: -200px;
+      right: auto;
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg); }
+    .single-portfolio-item.portfolio-item-3 .backend-content h2 {
+      top: -180px;
+      left: 30%;
+      right: auto; }
+      @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        .single-portfolio-item.portfolio-item-3 .backend-content h2 {
+          top: -130px; } }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .single-portfolio-item.portfolio-item-3 .backend-content h2 {
+          top: -90px;
+          font-size: 100px; } }
+      @media only screen and (max-width: 767px) {
+        .single-portfolio-item.portfolio-item-3 .backend-content h2 {
+          top: -70px; } }
+    @media only screen and (max-width: 767px) {
+      .single-portfolio-item.portfolio-item-3 {
+        margin-bottom: 100px; } }
+    .single-portfolio-item.portfolio-item-4 {
+      top: -220px; }
+      .single-portfolio-item.portfolio-item-4 .backend-content .dots {
+        top: auto;
+        bottom: -130px;
+        left: 70%;
+        right: auto;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg); }
+      @media only screen and (max-width: 767px) {
+        .single-portfolio-item.portfolio-item-4 {
+          top: 0;
+          margin-bottom: 100px; } }
+    .single-portfolio-item.portfolio-item-5 {
+      top: -450px;
+      height: 0; }
+      @media only screen and (max-width: 767px) {
+        .single-portfolio-item.portfolio-item-5 {
+          top: 0;
+          height: auto;
+          margin-bottom: 100px; } }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .single-portfolio-item.portfolio-item-5 {
+          top: -230px; } }
+    .single-portfolio-item.portfolio-item-6 {
+      top: 0;
+      height: 0; }
+      @media only screen and (max-width: 767px) {
+        .single-portfolio-item.portfolio-item-6 {
+          height: auto;
+          margin-bottom: 100px; } }
+    .single-portfolio-item.portfolio-item-7 {
+      margin-top: 50px; }
+      .single-portfolio-item.portfolio-item-7 .backend-content .dots {
+        position: absolute;
+        z-index: -1;
+        top: auto;
+        bottom: 0;
+        left: auto;
+        right: -150px; }
+      .single-portfolio-item.portfolio-item-7 .backend-content h2 {
+        top: -180px;
+        left: 30%;
+        right: auto; }
+        @media only screen and (min-width: 992px) and (max-width: 1199px) {
+          .single-portfolio-item.portfolio-item-7 .backend-content h2 {
+            top: -100px; } }
+        @media only screen and (max-width: 767px) {
+          .single-portfolio-item.portfolio-item-7 .backend-content h2 {
+            top: -60px; } }
+
+
+/* :: Call to Action Area CSS */
+.call-to-action-content {
+    text-align: center; }
+    .call-to-action-content h2 {
+      font-weight: 100;
+      font-size: 72px;
+      margin-bottom: 15px; }
+      @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        .call-to-action-content h2 {
+          font-size: 55px; } }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .call-to-action-content h2 {
+          font-size: 36px; } }
+      @media only screen and (max-width: 767px) {
+        .call-to-action-content h2 {
+          font-size: 30px; } }
+    .call-to-action-content h5 {
+      font-size: 48px;
+      margin-bottom: 0; }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .call-to-action-content h5 {
+          font-size: 30px; } }
+      @media only screen and (max-width: 767px) {
+        .call-to-action-content h5 {
+          font-size: 24px; } }
+
+  .sonar-call-to-action-area {
+    position: relative;
+    z-index: 1;
+    overflow: hidden; }
+    .sonar-call-to-action-area .backEnd-content h2 {
+      position: absolute;
+      font-size: 230px;
+      color: #f0f0f0;
+      z-index: -1;
+      top: -30px;
+      left: -3%; }
+      @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        .sonar-call-to-action-area .backEnd-content h2 {
+          font-size: 170px;
+          top: 0; } }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .sonar-call-to-action-area .backEnd-content h2 {
+          font-size: 150px;
+          top: 0; } }
+      @media only screen and (max-width: 767px) {
+        .sonar-call-to-action-area .backEnd-content h2 {
+          font-size: 100px; } }

@@ -1,0 +1,62 @@
+.header-area {
+    position: fixed;
+    z-index: 995;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    background-color: transparent;
+    padding: 15px 30px;
+}
+
+.header-area .logo-area a {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 100;
+}
+
+@media only screen and (max-width: 767px) {
+    .header-area .logo-area a {
+        font-size: 24px;
+    }
+}
+
+.header-area .menu-content-area .header-social-area {
+    margin-right: 30px;
+}
+
+.header-area .menu-content-area .header-social-area a {
+    font-size: 18px;
+    padding: 0 10px;
+    color: #ffffff;
+}
+
+    @media only screen and (max-width: 767px) {
+        .header-area .menu-content-area .header-social-area a {
+            padding: 0 5px;
+            font-size: 14px;
+        }
+    }
+
+@media only screen and (max-width: 767px) {
+    .header-area .menu-content-area .header-social-area {
+        margin-right: 15px;
+    }
+}
+
+.header-area.sticky {
+    background-color: #232323;
+}
+
+@media only screen and (max-width: 767px) {
+    .header-area {
+        padding: 10px 0;
+    }
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    cursor: pointer;
+}
