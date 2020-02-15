@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { WOW } from 'wowjs/dist/wow.min';
 
 @Component({
-  selector: 'app-portafolio',
-  templateUrl: './portafolio.component.html',
-  styleUrls: ['./portafolio.component.scss']
+    selector: 'app-portafolio',
+    templateUrl: './portafolio.component.html',
+    styleUrls: ['./portafolio.component.scss']
 })
-export class PortafolioComponent implements OnInit {
+export class PortafolioComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+
+    ngAfterViewInit() {
+        new WOW().init();
+    }
 
 }

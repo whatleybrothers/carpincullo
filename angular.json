@@ -34,12 +34,9 @@
                             "node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
                             "src/styles.scss"
                         ],
-                        "stylePreprocessorOptions": {
-                            "includePaths": [
-                                "node_modules/themify-icons/themify-icons/_themify-icons.scss"
-                            ]
-                        },
-                        "scripts": []
+                        "scripts": [
+                            "node_modules/wowjs/dist/wow.js"
+                        ]
                     },
                     "configurations": {
                         "production": {
