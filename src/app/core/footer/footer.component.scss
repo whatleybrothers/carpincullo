@@ -1,41 +1,55 @@
+@import '~src/scss/responsive';
+@import '~src/scss/theme_color';
+
 /* :: Footer CSS */
+
 .footer-area {
     position: relative;
     z-index: 1;
-    overflow: hidden; }
-    .footer-area .copywrite-text {
-      padding: 30px;
-      text-align: center; }
-      .footer-area .copywrite-text p {
-        font-weight: 300;
-        margin-bottom: 0; }
-      .footer-area .copywrite-text a {
-        color: #565656;
-        font-weight: 300;
-        font-size: 15px; }
-        .footer-area .copywrite-text a:hover, .footer-area .copywrite-text a:focus {
-          font-size: 15px; }
-    .footer-area .backEnd-content .dots {
-      position: absolute;
-      right: -50px;
-      top: 0;
-      z-index: -1; }
-    .footer-area .backEnd-content h2 {
-      position: absolute;
-      font-size: 230px;
-      color: #f0f0f0;
-      z-index: -1;
-      top: -50px;
-      left: -50px; }
-      @media only screen and (min-width: 992px) and (max-width: 1199px) {
-        .footer-area .backEnd-content h2 {
-          font-size: 170px; } }
-      @media only screen and (min-width: 768px) and (max-width: 991px) {
-        .footer-area .backEnd-content h2 {
-          font-size: 120px;
-          top: 0; } }
-      @media only screen and (max-width: 767px) {
-        .footer-area .backEnd-content h2 {
-          font-size: 80px;
-          top: 0;
-          left: -30px; } }
+    overflow: hidden;
+    .copywrite-text {
+        padding: 30px;
+        text-align: center;
+        p {
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+        a {
+            color: $text-color;
+            font-weight: 300;
+            font-size: 15px;
+            &:hover,
+            &:focus {
+                font-size: 15px;
+            }
+        }
+    }
+    .backEnd-content {
+        .dots {
+            position: absolute;
+            right: -50px;
+            top: 0;
+            z-index: -1;
+        }
+        h2 {
+            position: absolute;
+            font-size: 230px;
+            color: #f0f0f0;
+            z-index: -1;
+            top: -50px;
+            left: -50px;
+            @media #{$breakpoint-lg} {
+                font-size: 170px;
+            }
+            @media #{$breakpoint-md} {
+                font-size: 120px;
+                top: 0;
+            }
+            @media #{$breakpoint-xs} {
+                font-size: 80px;
+                top: 0;
+                left: -30px;
+            }
+        }
+    }
+}

@@ -57,6 +57,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
             imgLink: '../../../assets/img/bg-img/slide4.jpg',
             title: 'Title_1',
             content: 'Content_1'
+        },
+        {
+            id: 5,
+            imgLink: '../../../assets/img/bg-img/slide4.jpg',
+            title: 'Title_1',
+            content: 'Content_1'
         }
     ];
 
