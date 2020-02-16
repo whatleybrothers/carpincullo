@@ -1,8 +1,8 @@
     <!-- ***** Hero Area Start ***** -->
     <section class="hero-area">
-        <div class="hero-slides owl-carousel">
+        <!-- <div class="hero-slides owl-carousel"> -->
             <!-- Single Hero Slide -->
-            <div class="single-hero-slide bg-img slide-background-overlay" style="background-image: url(../../../assets/img/bg-img/slide1.jpg);">
+            <!-- <div class="single-hero-slide bg-img slide-background-overlay" style="background-image: url(../../../assets/img/bg-img/slide1.jpg);">
                 <div class="container h-100">
                     <div class="row h-100 align-items-end">
                         <div class="col-12">
@@ -15,17 +15,29 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+
+        <div class="hero-slides owl-carousel owl-loaded">
+            <owl-carousel-o [options]="customOptions">
+                <ng-container *ngFor="let item of carouselItems">
+                    <ng-template carouselSlide [id]="item.id">
+                        <div class="single-hero-slide bg-img slide-background-overlay" [ngStyle]="{'background-image': 'url(' + item.imgLink + ')'}">
+                            <div class="container h-100">
+                                <div class="row h-100 align-items-end">
+                                    <div class="col-12">
+                                        <div class="hero-slides-content">
+                                            <div class="line"></div>
+                                            <h2>Sand Storm</h2>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel tortor facilisis, volutpat nulla placerat, tincidunt mi. Nullam vel orci dui. Suspendisse sit amet laoreet neque. Fusce sagittis suscipit sem.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </ng-container>
+            </owl-carousel-o>
         </div>
-
-        <owl-carousel-o [options]="customOptions">
-
-            <ng-container *ngFor="let item of carouselItems">
-              <ng-template carouselSlide [id]="1">
-                <img [src]="item.imgLink" [alt]="'slide.alt'" [title]="'slide.title'">
-              </ng-template>
-            </ng-container>
-
-          </owl-carousel-o>
     </section>
     <!-- ***** Hero Area End ***** -->
 

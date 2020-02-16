@@ -3,6 +3,12 @@
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
+@import './scss/mixins';
+@import './scss/responsive';
+@import './scss/theme_color';
+@import './scss/variables';
+
+
 /*
 Buttons
 */

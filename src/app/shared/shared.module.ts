@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { UiInputComponent } from './components/ui-input/ui-input.component';
@@ -19,11 +19,11 @@ import { UiFormErrorComponent } from './components/ui-form-error/ui-form-error.c
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
-        NgbModule,
+        // NgbModule,
         CarouselModule
     ],
     exports: [
-        NgbModule,
+        // NgbModule,
         CarouselModule,
         UiInputComponent,
         UiButtonComponent
