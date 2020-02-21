@@ -15,10 +15,4 @@ install:
 
 script:
     - npm run build
-
-deploy:
-    provider: firebase
-    token:
-        secure: $FIREBASE_TOKEN
-    project: $FIREBASE_PROJECT_ID
-    message: "Deploying..."
+    - firebase deploy --only hosting --token $FIREBASE_TOKEN
