@@ -20,5 +20,5 @@ deploy:
     provider: firebase
     token:
         secure: $FIREBASE_TOKEN
-    project: "carpincullo"
+    project: $FIREBASE_PROJECT_ID
     message: "Deploying..."
