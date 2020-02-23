@@ -13,7 +13,6 @@ export class UiButtonComponent implements OnInit {
     @Input() public buttonText: string;
     @Input() public iconClass: string;
     @Input() public additionalClasses: string;
-    @Input() public alwaysEnableButton: boolean;
     @Input() public buttonType?: string;
     @Input() public textClass: string;
 
@@ -33,9 +32,8 @@ export class UiButtonComponent implements OnInit {
         this.buttonText = this.buttonText || '';
         this.iconClass = this.iconClass || '';
         this.additionalClasses = this.additionalClasses || '';
-        this.alwaysEnableButton = this.alwaysEnableButton || false;
         this.buttonType = this.buttonType || 'button';
-        this.textClass = this.textClass || 'cw-demibold-14';
+        this.textClass = this.textClass || '';
     }
 
     // public ngAfterViewChecked() {

@@ -11,7 +11,10 @@
                         <div class="line"></div>
                         <h2>Take a look at my Portfolio</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel tortor facilisis, volutpat nulla placerat, tincidunt mi. Nullam vel orci dui.</p>
-                        <a href="#" class="btn sonar-btn white-btn">contact me</a>
+                        <app-ui-button
+                            [additionalClasses]="'white-btn'"
+                            [buttonText]="'Contact Me'">
+                        </app-ui-button>
                     </div>
                 </div>
             </div>
@@ -158,7 +161,9 @@
 
             <div class="row">
                 <div class="col-12 text-center">
-                    <a href="#" class="btn sonar-btn">Load More</a>
+                    <app-ui-button
+                        [buttonText]="'Load More'">
+                    </app-ui-button>
                 </div>
             </div>
         </div>

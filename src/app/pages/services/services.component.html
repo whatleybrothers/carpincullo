@@ -11,7 +11,10 @@
                         <div class="line"></div>
                         <h2>I provide top quality services</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel tortor facilisis, volutpat nulla placerat, tincidunt mi. Nullam vel orci dui.</p>
-                        <a href="#" class="btn sonar-btn white-btn">contact me</a>
+                        <app-ui-button
+                            [additionalClasses]="'white-btn'"
+                            [buttonText]="'Contact Me'">
+                        </app-ui-button>
                     </div>
                 </div>
             </div>
@@ -181,8 +184,10 @@
                 <div class="col-12">
                     <div class="call-to-action-content">
                         <h2>I am an experienced photographer</h2>
-                        <h5>Let’s talk</h5>
-                        <a href="#" class="btn sonar-btn mt-100">contact me</a>
+                        <h5 class="mb-100">Let’s talk</h5>
+                        <app-ui-button
+                            [buttonText]="'Contact Me'">
+                        </app-ui-button>
                     </div>
                 </div>
             </div>
