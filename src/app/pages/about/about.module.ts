@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { AboutRoutingModule } from './about-routing.module';
+import { SharedModule } from '../../shared/shared.module';
 
 import { AboutComponent } from './about.component';
 
@@ -11,7 +12,8 @@ import { AboutComponent } from './about.component';
     ],
     imports: [
         CommonModule,
-        AboutRoutingModule
+        AboutRoutingModule,
+        SharedModule
     ],
     exports: [
         AboutComponent

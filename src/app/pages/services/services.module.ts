@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { ServicesRoutingModule } from './services-routing.module';
+import { SharedModule } from '../../shared/shared.module';
 
 import { ServicesComponent } from './services.component';
 
@@ -11,7 +12,8 @@ import { ServicesComponent } from './services.component';
     ],
     imports: [
         CommonModule,
-        ServicesRoutingModule
+        ServicesRoutingModule,
+        SharedModule
     ],
     exports: [
         ServicesComponent

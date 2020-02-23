@@ -11,7 +11,10 @@
                     <div class="line"></div>
                     <h2>Contact me</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel tortor facilisis, volutpat nulla placerat, tincidunt mi. Nullam vel orci dui.</p>
-                    <a href="#" class="btn sonar-btn white-btn">contact me</a>
+                    <app-ui-button
+                        [additionalClasses]="'white-btn'"
+                        [buttonText]="'Contact Me'">
+                    </app-ui-button>
                 </div>
             </div>
         </div>
@@ -56,7 +59,9 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="btn sonar-btn">Contact Me</button>
+                                <app-ui-button
+                                    [buttonText]="'Contact Me'">
+                                </app-ui-button>
                             </div>
                         </div>
                     </form>
