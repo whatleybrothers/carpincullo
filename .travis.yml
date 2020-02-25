@@ -22,6 +22,6 @@ after_success:
 notifications:
     slack:
         rooms:
-        - $SLACK_NOTIFICATION_ID
+            - $SLACK_NOTIFICATION_ID
         on_success: change # default: always
         on_failure: always # default: always
