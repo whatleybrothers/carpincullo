@@ -17,3 +17,11 @@
         box-shadow: none;
     }
 }
+
+textarea {
+    margin-bottom: 50px;
+    &.form-control {
+        height: 220px;
+        padding: 15px;
+    }
+}

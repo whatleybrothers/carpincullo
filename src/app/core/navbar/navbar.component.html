@@ -14,7 +14,7 @@
             <ul>
                 <ng-container *ngFor="let lnk of links">
                     <li class="nav-item">
-                        <a class="nav-link" [routerLink]="[lnk.link]">{{lnk.name}}</a>
+                        <a class="nav-link" [routerLink]="[lnk.link]" (click)="hideMenu()">{{lnk.name}}</a>
                     </li>
                 </ng-container>
             </ul>

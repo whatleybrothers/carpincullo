@@ -7,13 +7,15 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { UiInputComponent } from './components/ui-input/ui-input.component';
 import { UiButtonComponent } from './components/ui-button/ui-button.component';
 import { UiFormErrorComponent } from './components/ui-form-error/ui-form-error.component';
+import { UiTextAreaComponent } from './components/ui-text-area/ui-text-area.component';
 
 
 @NgModule({
     declarations: [
         UiInputComponent,
         UiButtonComponent,
-        UiFormErrorComponent
+        UiFormErrorComponent,
+        UiTextAreaComponent
     ],
     imports: [
         CommonModule,
@@ -26,7 +28,8 @@ import { UiFormErrorComponent } from './components/ui-form-error/ui-form-error.c
         // NgbModule,
         CarouselModule,
         UiInputComponent,
-        UiButtonComponent
+        UiButtonComponent,
+        UiTextAreaComponent
     ]
 })
 export class SharedModule { }
