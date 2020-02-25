@@ -19,7 +19,7 @@ script:
 notifications:
     slack:
         rooms:
-            - $SLACK_NOTIFICATION_ID
+            - whatleybros:tdCFEg9QUF0Bj3jqa3CkVvHM#carpincullo
         on_success: change # default: always
         on_failure: always # default: always
 
