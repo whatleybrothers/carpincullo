@@ -1,224 +1,271 @@
+@import '~src/scss/mixins';
+@import '~src/scss/responsive';
+@import '~src/scss/theme_color';
+
 /* :: Hero Area CSS */
+
 .hero-area {
-    background-color: #232323;
+    background-color: $bg-default;
     position: relative;
     z-index: 1;
     overflow: hidden;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
-    .hero-area .backEnd-content .dots {
-      position: absolute;
-      right: -200px;
-      top: 50%;
-      z-index: -2;
-      opacity: 0.1;
-      -webkit-transform: translateY(-50%);
-      transform: translateY(-50%); }
-    .hero-area .hero-thumbnail,
-    .hero-area .hero-content {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-      flex: 0 0 50%;
-      min-width: 50%;
-      position: relative;
-      z-index: 1; }
-      @media only screen and (max-width: 767px) {
-        .hero-area .hero-thumbnail,
-        .hero-area .hero-content {
-          -webkit-box-flex: 0;
-          -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-          min-width: 100%; } }
-    .hero-area .hero-content {
-      height: 880px;
-      padding: 100px 0; }
-      .hero-area .hero-content .line {
-        width: 100px;
-        height: 1px;
-        background-color: #ffffff;
-        margin-bottom: 30px;
-        display: block; }
-      .hero-area .hero-content h2 {
-        color: #ffffff;
-        font-size: 48px;
-        margin-bottom: 25px; }
-        @media only screen and (min-width: 992px) and (max-width: 1199px) {
-          .hero-area .hero-content h2 {
-            font-size: 40px; } }
-        @media only screen and (min-width: 768px) and (max-width: 991px) {
-          .hero-area .hero-content h2 {
-            font-size: 30px; } }
-        @media only screen and (max-width: 767px) {
-          .hero-area .hero-content h2 {
-            font-size: 30px; } }
-      .hero-area .hero-content p {
-        color: #ffffff;
-        margin-bottom: 30px; }
-      .hero-area .hero-content.aboutUs {
-        height: 1100px; }
-        @media only screen and (max-width: 767px) {
-          .hero-area .hero-content.aboutUs {
-            height: auto; } }
-      @media only screen and (max-width: 767px) {
-        .hero-area .hero-content {
-          height: auto; } }
-    .hero-area .hero-thumbnail.aboutUs::before {
-      position: absolute;
-      width: 100%;
-      height: 100px;
-      bottom: 0;
-      left: 0;
-      background-color: #ffffff;
-      content: '';
-      z-index: 1; }
-      @media only screen and (max-width: 767px) {
-        .hero-area .hero-thumbnail.aboutUs::before {
-          display: none; } }
-    @media only screen and (max-width: 767px) {
-      .hero-area .hero-thumbnail {
-        height: 400px; } }
+    @include flex-wrap(wrap);
+    .backEnd-content {
+        .dots {
+            position: absolute;
+            right: -200px;
+            top: 50%;
+            z-index: -2;
+            opacity: 0.1;
+            @include transform(translateY(-50%));
+        }
+    }
 
+    .hero-thumbnail,
+    .hero-content {
+        @include flex(0 0 50%);
+        min-width: 50%;
+        position: relative;
+        z-index: 1;
+        @media #{$breakpoint-xs} {
+            @include flex(0 0 100%);
+            min-width: 100%;
+        }
+    }
+    .hero-content {
+        height: 880px;
+        padding: 100px 0;
+        .line {
+            width: 100px;
+            height: 1px;
+            background-color: $color-white;
+            margin-bottom: 30px;
+            display: block;
+        }
+        h2 {
+            color: $color-white;
+            font-size: 48px;
+            margin-bottom: 25px;
+            @media #{$breakpoint-lg} {
+                font-size: 40px;
+            }
+            @media #{$breakpoint-md} {
+                font-size: 30px;
+            }
+            @media #{$breakpoint-xs} {
+                font-size: 30px;
+            }
+        }
+        p {
+            color: $color-white;
+            margin-bottom: 30px;
+        }
+        &.aboutUs {
+            height: 1100px;
+            @media #{$breakpoint-xs} {
+                height: auto;
+            }
+        }
+        @media #{$breakpoint-xs} {
+            height: auto;
+        }
+    }
+    .hero-thumbnail {
+        &.aboutUs {
+            &::before {
+                position: absolute;
+                width: 100%;
+                height: 100px;
+                bottom: 0;
+                left: 0;
+                background-color: $color-white;
+                content: '';
+                z-index: 1;
+                @media #{$breakpoint-xs} {
+                    display: none;
+                }
+            }
+        }
+        @media #{$breakpoint-xs} {
+            height: 400px;
+        }
+    }
+}
+
+.bg-img {
+    height: 880px;
+}
 
 
 /* :: Service Area CSS */
+
 .single-services-area {
     position: relative;
     z-index: 1;
-    margin-bottom: 50px; }
-    .single-services-area img {
-      margin-bottom: 20px; }
-    .single-services-area h4 {
-      font-size: 28px;
-      margin-bottom: 40px; }
-    .single-services-area p {
-      margin-bottom: 0; }
+    margin-bottom: 50px;
+    img {
+        margin-bottom: 20px;
+    }
+    h4 {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
 
 
 /* :: Testimonials Area CSS */
+
 .sonar-testimonials-area {
     position: relative;
     z-index: 1;
     padding: 70px 0;
-    margin: 0 50px; }
-    .sonar-testimonials-area::before {
-      position: absolute;
-      width: 20%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      background-color: #ffffff;
-      content: ''; }
-    .sonar-testimonials-area .testimonial-content {
-      padding: 100px 80px 100px 200px;
-      position: relative;
-      z-index: 1;
-      left: -15px;
-      box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.15); }
-      @media only screen and (min-width: 992px) and (max-width: 1199px) {
-        .sonar-testimonials-area .testimonial-content {
-          padding: 100px 80px 100px 130px; } }
-      @media only screen and (max-width: 767px) {
-        .sonar-testimonials-area .testimonial-content {
-          padding: 50px 15px 50px 15px; } }
-    .sonar-testimonials-area .single-tes-slide p {
-      margin-bottom: 40px;
-      font-style: italic; }
-    .sonar-testimonials-area .single-tes-slide h6 {
-      margin-bottom: 0;
-      font-style: italic; }
-    .sonar-testimonials-area .owl-dots {
-      position: absolute;
-      top: 0;
-      left: -100px;
-      z-index: 10;
-      -webkit-transform: translateY(-50%);
-      transform: translateY(-50%); }
-      .sonar-testimonials-area .owl-dots .owl-dot {
-        width: 8px;
-        height: 8px;
-        border: 1px solid #6a6a67;
-        border-radius: 50%;
-        margin: 8px 0;
-        display: block; }
-        .sonar-testimonials-area .owl-dots .owl-dot.active {
-          border-color: #232323;
-          background-color: #232323; }
-      @media only screen and (min-width: 992px) and (max-width: 1199px) {
-        .sonar-testimonials-area .owl-dots {
-          top: 20%; } }
-      @media only screen and (min-width: 768px) and (max-width: 991px) {
-        .sonar-testimonials-area .owl-dots {
-          top: 30%; } }
-      @media only screen and (max-width: 767px) {
-        .sonar-testimonials-area .owl-dots {
-          display: none; } }
-    @media only screen and (max-width: 767px) {
-      .sonar-testimonials-area {
-        margin: 0 15px; } }
+    margin: 0 50px;
+    &::before {
+        position: absolute;
+        width: 20%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: $color-white;
+        content: '';
+    }
+    .testimonial-content {
+        padding: 100px 80px 100px 200px;
+        position: relative;
+        z-index: 1;
+        left: -15px;
+        box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.15);
+        @media #{$breakpoint-lg} {
+            padding: 100px 80px 100px 130px;
+        }
+        @media #{$breakpoint-xs} {
+            padding: 50px 15px 50px 15px;
+        }
+    }
+    .single-tes-slide {
+        p {
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+        h6 {
+            margin-bottom: 0;
+            font-style: italic;
+        }
+    }
+    .owl-dots {
+        position: absolute;
+        top: 0;
+        left: -100px;
+        z-index: 10;
+        @include transform(translateY(-50%));
+        .owl-dot {
+            width: 8px;
+            height: 8px;
+            border: 1px solid #6a6a67;
+            border-radius: 50%;
+            margin: 8px 0;
+            display: block;
+            &.active {
+                border-color: $bg-default;
+                background-color: $bg-default;
+            }
+        }
+        @media #{$breakpoint-lg} {
+            top: 20%;
+        }
+        @media #{$breakpoint-md} {
+            top: 30%;
+        }
+        @media #{$breakpoint-xs} {
+            display: none;
+        }
+    }
+    @media #{$breakpoint-xs} {
+        margin: 0 15px;
+    }
+}
+
 
 
 /* Cool Facts CSS */
+
 .single-cool-fact-area {
-    text-align: center; }
-    .single-cool-fact-area i {
-      font-size: 100px;
-      color: #2f2f2f;
-      margin-bottom: 30px;
-      display: block; }
-    .single-cool-fact-area img {
-      margin-bottom: 30px; }
-    .single-cool-fact-area h2 {
-      font-size: 48px;
-      margin-bottom: 5px; }
-    .single-cool-fact-area p {
-      margin-bottom: 0; }
+    text-align: center;
+    i {
+        font-size: 100px;
+        color: $primary-color;
+        margin-bottom: 30px;
+        display: block;
+    }
+    img {
+        margin-bottom: 30px;
+    }
+    h2 {
+        font-size: 48px;
+        margin-bottom: 5px;
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
 
 
 /* :: Call to Action Area CSS */
-.call-to-action-content {
-    text-align: center; }
-    .call-to-action-content h2 {
-      font-weight: 100;
-      font-size: 72px;
-      margin-bottom: 15px; }
-      @media only screen and (min-width: 992px) and (max-width: 1199px) {
-        .call-to-action-content h2 {
-          font-size: 55px; } }
-      @media only screen and (min-width: 768px) and (max-width: 991px) {
-        .call-to-action-content h2 {
-          font-size: 36px; } }
-      @media only screen and (max-width: 767px) {
-        .call-to-action-content h2 {
-          font-size: 30px; } }
-    .call-to-action-content h5 {
-      font-size: 48px;
-      margin-bottom: 0; }
-      @media only screen and (min-width: 768px) and (max-width: 991px) {
-        .call-to-action-content h5 {
-          font-size: 30px; } }
-      @media only screen and (max-width: 767px) {
-        .call-to-action-content h5 {
-          font-size: 24px; } }
 
-  .sonar-call-to-action-area {
+.call-to-action-content {
+    text-align: center;
+    h2 {
+        font-weight: 100;
+        font-size: 72px;
+        margin-bottom: 15px;
+        @media #{$breakpoint-lg} {
+            font-size: 55px;
+        }
+        @media #{$breakpoint-md} {
+            font-size: 36px;
+        }
+        @media #{$breakpoint-xs} {
+            font-size: 30px;
+        }
+    }
+    h5 {
+        font-size: 48px;
+        margin-bottom: 0;
+        @media #{$breakpoint-md} {
+            font-size: 30px;
+        }
+        @media #{$breakpoint-xs} {
+            font-size: 24px;
+        }
+    }
+}
+
+.sonar-call-to-action-area {
     position: relative;
     z-index: 1;
-    overflow: hidden; }
-    .sonar-call-to-action-area .backEnd-content h2 {
-      position: absolute;
-      font-size: 230px;
-      color: #f0f0f0;
-      z-index: -1;
-      top: -30px;
-      left: -3%; }
-      @media only screen and (min-width: 992px) and (max-width: 1199px) {
-        .sonar-call-to-action-area .backEnd-content h2 {
-          font-size: 170px;
-          top: 0; } }
-      @media only screen and (min-width: 768px) and (max-width: 991px) {
-        .sonar-call-to-action-area .backEnd-content h2 {
-          font-size: 150px;
-          top: 0; } }
-      @media only screen and (max-width: 767px) {
-        .sonar-call-to-action-area .backEnd-content h2 {
-          font-size: 100px; } }
+    overflow: hidden;
+    .backEnd-content {
+        h2 {
+            position: absolute;
+            font-size: 230px;
+            color: #f0f0f0;
+            z-index: -1;
+            top: -30px;
+            left: -3%;
+            @media #{$breakpoint-lg} {
+                font-size: 170px;
+                top: 0;
+            }
+            @media #{$breakpoint-md} {
+                font-size: 150px;
+                top: 0;
+            }
+            @media #{$breakpoint-xs} {
+                font-size: 100px;
+            }
+        }
+    }
+}
