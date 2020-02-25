@@ -15,6 +15,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
     }
 
     ngAfterViewInit() {
+        window.scroll(0,0);
         new WOW().init();
     }
 }

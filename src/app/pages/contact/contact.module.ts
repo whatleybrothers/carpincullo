@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { ContactRoutingModule } from './contact-routing.module';
 import { SharedModule } from '../../shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ContactComponent } from './contact.component';
 
@@ -13,6 +14,8 @@ import { ContactComponent } from './contact.component';
     imports: [
         CommonModule,
         ContactRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
         SharedModule
     ],
     exports: [

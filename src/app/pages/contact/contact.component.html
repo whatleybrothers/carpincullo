@@ -36,26 +36,42 @@
                     <h2>I am an experienced photographer</h2>
                     <h4>Let’s talk</h4>
 
-                    <form action="#" method="post">
+                    <form [formGroup]="contactForm" autocomplete="off">
                         <div class="row">
                             <div class="col-12 col-md-4">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="contact-name" placeholder="Your Name">
+                                    <app-ui-input
+                                        [placeHolderText]="'Full Name'"
+                                        [inputId]="'fullName'"
+                                        [theFormGroup]="contactForm">
+                                    </app-ui-input>
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="contact-email" placeholder="Your Email">
+                                    <app-ui-input
+                                        [placeHolderText]="'Email'"
+                                        [inputId]="'email'"
+                                        [theFormGroup]="contactForm">
+                                    </app-ui-input>
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="contact-email" placeholder="Subject">
+                                    <app-ui-input
+                                        [placeHolderText]="'Subject'"
+                                        [inputId]="'subject'"
+                                        [theFormGroup]="contactForm">
+                                    </app-ui-input>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                    <app-ui-text-area
+                                        [placeHolderText]="'Message'"
+                                        [inputId]="'message'"
+                                        [theFormGroup]="contactForm">
+                                    </app-ui-text-area>
                                 </div>
                             </div>
                             <div class="col-12">

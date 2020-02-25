@@ -1,8 +1,11 @@
 <div [formGroup]="theFormGroup">
-    <input type="text"
+    <textarea
         class="form-control"
         formControlName="{{inputId}}"
         id="{{inputId}}"
         name="{{inputId}}"
+        cols="30"
+        rows="10"
         placeholder="{{placeHolderText}}">
+    </textarea>
 </div>
