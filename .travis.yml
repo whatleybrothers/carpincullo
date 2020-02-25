@@ -20,4 +20,8 @@ after_success:
     - firebase deploy --only hosting --token $FIREBASE_TOKEN
 
 notifications:
-    slack: $SLACK_NOTIFICATION_TOKEN
+    slack:
+        rooms:
+        - $SLACK_NOTIFICATION_ID
+        on_success: change # default: always
+        on_failure: always # default: always
