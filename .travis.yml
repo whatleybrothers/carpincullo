@@ -22,6 +22,6 @@ after_success:
 notifications:
     slack:
         rooms:
-            - $SLACK_NOTIFICATION_ID
+            - secure: og+G9nXh0mSuV1+PWU0YTvbFRenOBz4r85NZvqlzuchrvhPkC1jgRp5kT5IeLb84Tc6fNDRth4jZxtI3sFszln/WhcFuifQ3M85jZxBzNmrzeB+g22+wwjbRFvdXEYQ07rqDENaM3IheuyW+IyxpCl7wLIS58aCvxdZL3l503VC95aLyZg44lMTSINBRGnkrS8aHX4GTz4iOswS78hhxJ9ZziQj3IVaAE175c7zWX/F1BPNNWa69qnAE3YEyK/7Bp0Ums82sIfdIY9XpI4xNvP+I4gMexz9AyXnS0tB32Ccw8UCie8aWu3hXCmxzP3pIZKtDozoaOeF7pjhUpnFVqbi1RxUeqblga6wOybzb5qXGRzjqS+J2xIn0DGPxta5diYs8w4pANFiPRU4Q11/2u7vYcPxGAlTb0eEwaZnA5jehLEQtd3Q7Bd0e2hHR4GG/0Id/v9PeW+BP29JvqHbKfhsBtZkhRLgsoznzoNQNOmfefMbLF3iseGTjlmtXCD+2rRE6ABnSdEh2pEPOUj990/0hDyKv9TFD+LPXMob8pS0ENwyuyEwE6gRSKtljnBUT2SB7sUgWGgbqrq/H0+kCL32nzYguuoEiLowlp6g1O9f6/s8lnVM9TJ2GmTVtT1IlkEwU9cvTaHg8dAWRMkkbVqpAgU6IWADARnChYfP+Txs=
         on_success: change # default: always
         on_failure: always # default: always
