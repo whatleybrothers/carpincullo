@@ -16,12 +16,13 @@ install:
 script:
     - npm run build
 
+after_success:
+    - firebase deploy --only hosting --token $FIREBASE_TOKEN
+
+
 notifications:
     slack:
         rooms:
-            - whatleybros:tdCFEg9QUF0Bj3jqa3CkVvHM#carpincullo
+            - $SLACK_NOTIFICATION_ID
         on_success: change # default: always
         on_failure: always # default: always
-
-after_success:
-    - firebase deploy --only hosting --token $FIREBASE_TOKEN
