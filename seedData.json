@@ -1,0 +1,124 @@
+[
+    {
+        "title": "Mountains in the mist",
+        "description": "Landscapes",
+        "imgUrl": "",
+        "imgLocation": "testPics/1.jpg",
+        "created": "",
+        "type": "ONE"
+    },
+    {
+        "title": "A beautifull encounter",
+        "description": "Portrait",
+        "imgUrl": "",
+        "imgLocation": "testPics/2.jpg",
+        "created": "",
+        "type": "TWO"
+    },
+    {
+        "title": "Mountains in the mist 2",
+        "description": "Landscapes",
+        "imgUrl": "",
+        "imgLocation": "testPics/3.jpg",
+        "created": "",
+        "type": "THREE"
+    },
+    {
+        "title": "A beautifull encounter 2",
+        "description": "Portrait",
+        "imgUrl": "",
+        "imgLocation": "testPics/4.jpg",
+        "created": "",
+        "type": "FOUR"
+    },
+    {
+        "title": "Mountains in the mist 3",
+        "description": "Landscapes",
+        "imgUrl": "",
+        "imgLocation": "testPics/5.jpg",
+        "created": "",
+        "type": "FIVE"
+    },
+
+    {
+        "title": "Mountains in the mist",
+        "description": "Landscapes",
+        "imgUrl": "",
+        "imgLocation": "testPics/1.jpg",
+        "created": "",
+        "type": "ONE"
+    },
+    {
+        "title": "A beautifull encounter",
+        "description": "Portrait",
+        "imgUrl": "",
+        "imgLocation": "testPics/2.jpg",
+        "created": "",
+        "type": "TWO"
+    },
+    {
+        "title": "Mountains in the mist 2",
+        "description": "Landscapes",
+        "imgUrl": "",
+        "imgLocation": "testPics/3.jpg",
+        "created": "",
+        "type": "THREE"
+    },
+    {
+        "title": "A beautifull encounter 2",
+        "description": "Portrait",
+        "imgUrl": "",
+        "imgLocation": "testPics/4.jpg",
+        "created": "",
+        "type": "FOUR"
+    },
+    {
+        "title": "Mountains in the mist 3",
+        "description": "Landscapes",
+        "imgUrl": "",
+        "imgLocation": "testPics/5.jpg",
+        "created": "",
+        "type": "FIVE"
+    },
+
+    {
+        "title": "Mountains in the mist",
+        "description": "Landscapes",
+        "imgUrl": "",
+        "imgLocation": "testPics/1.jpg",
+        "created": "",
+        "type": "ONE"
+    },
+    {
+        "title": "A beautifull encounter",
+        "description": "Portrait",
+        "imgUrl": "",
+        "imgLocation": "testPics/2.jpg",
+        "created": "",
+        "type": "TWO"
+    },
+    {
+        "title": "Mountains in the mist 2",
+        "description": "Landscapes",
+        "imgUrl": "",
+        "imgLocation": "testPics/3.jpg",
+        "created": "",
+        "type": "THREE"
+    },
+    {
+        "title": "A beautifull encounter 2",
+        "description": "Portrait",
+        "imgUrl": "",
+        "imgLocation": "testPics/4.jpg",
+        "created": "",
+        "type": "FOUR"
+    },
+    {
+        "title": "Mountains in the mist 3",
+        "description": "Landscapes",
+        "imgUrl": "",
+        "imgLocation": "testPics/5.jpg",
+        "created": "",
+        "type": "FIVE"
+    }
+]

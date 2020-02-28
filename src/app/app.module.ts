@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
@@ -33,7 +34,8 @@ const config = {
         CoreModule,
         SharedModule,
         AngularFireModule.initializeApp(config),
-        AngularFireStorageModule
+        AngularFireStorageModule,
+        AngularFirestoreModule
     ],
     providers: [],
     bootstrap: [AppComponent]
