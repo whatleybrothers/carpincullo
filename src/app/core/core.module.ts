@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 
+import {PaginationService} from './services/pagination.service';
+
 @NgModule({
     declarations: [
         NavbarComponent,
@@ -22,7 +24,9 @@ import { FooterComponent } from './footer/footer.component';
         BrowserAnimationsModule
         // RouterModule
     ],
-    providers: [],
+    providers: [
+        PaginationService
+    ],
     bootstrap: []
 })
 export class CoreModule { }

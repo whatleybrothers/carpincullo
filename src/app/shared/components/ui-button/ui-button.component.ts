@@ -16,7 +16,7 @@ export class UiButtonComponent implements OnInit {
     @Input() public buttonType?: string;
     @Input() public textClass: string;
 
-    @Output() public buttonWasClicked = new EventEmitter();
+    @Output() public buttonClicked = new EventEmitter();
 
     @ViewChild('button', { static: false }) public button: ElementRef;
 
@@ -46,7 +46,7 @@ export class UiButtonComponent implements OnInit {
 
     public emitClickAction() {
         if (!this.inProgress) {
-            this.buttonWasClicked.emit();
+            this.buttonClicked.emit();
         }
     }
 
