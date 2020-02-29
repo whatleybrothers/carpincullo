@@ -31,6 +31,7 @@ import { UiTextAreaComponent } from './components/ui-text-area/ui-text-area.comp
         CarouselModule,
         UiInputComponent,
         UiButtonComponent,
+        UiFormErrorComponent,
         UiTextAreaComponent
     ]
 })

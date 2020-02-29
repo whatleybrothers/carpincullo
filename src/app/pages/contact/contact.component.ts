@@ -12,6 +12,7 @@ import { tap } from 'rxjs/operators';
 export class ContactComponent implements OnInit, AfterViewInit {
 
     public contactForm: FormGroup;
+    public emailSent: boolean = false;
     @ViewChild('contactSection', {static: false}) contactSection: ElementRef;
 
 
@@ -31,10 +32,17 @@ export class ContactComponent implements OnInit, AfterViewInit {
     public initiateForm() {
         this.contactForm = this.fb.group({
             fullName: ['', [Validators.required]],
-            email: ['', [Validators.required]],
+            email: ['', [
+                Validators.required,
+                Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.+-]+\\.[a-zA-Z]{2,15}$')
+            ]],
             subject: ['', [Validators.required]],
             message: ['', [Validators.required]]
         });
+    }
+
+    public isFormInvalid(field: string) {
+        return (this.contactForm.get(field).invalid && this.contactForm.get(field).touched);
     }
 
     public onContactMe() {
@@ -46,20 +54,28 @@ export class ContactComponent implements OnInit, AfterViewInit {
     }
 
     public onSendEmail() {
-        let url = `https://us-central1-carpincullo-22333.cloudfunctions.net/emailMessage`;
-        let headers = new HttpHeaders({
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'
-        });
-
-        const body = this.getBodyContent();
-
-        this.httpClient.post(url, body, { headers })
-            .subscribe((res) => {
-                console.log(res);
-            }, (err) => {
-                console.log(err);
+        if (this.contactForm.valid) {
+            let url = `https://us-central1-carpincullo-22333.cloudfunctions.net/emailMessage`;
+            let headers = new HttpHeaders({
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
             });
+
+            const body = this.getBodyContent();
+
+            this.httpClient.post(url, body, { headers })
+                .subscribe((res) => {
+                    console.log(res);
+                    this.emailSent = true;
+                }, (err) => {
+                    console.log(err);
+                    this.emailSent = false;
+                });
+        } else {
+            Object.keys(this.contactForm.controls).forEach((key) => {
+                this.contactForm.get(key).markAsTouched();
+            });
+        }
     }
 
     private getBodyContent() {
@@ -73,5 +89,10 @@ export class ContactComponent implements OnInit, AfterViewInit {
             }
         }
         return body;
+    }
+
+    public onNewEmail() {
+        this.emailSent = false;
+        this.contactForm.reset();
     }
 }

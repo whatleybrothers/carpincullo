@@ -37,7 +37,7 @@
                     <h2>I am an experienced photographer</h2>
                     <h4>Let’s talk</h4>
 
-                    <form [formGroup]="contactForm" autocomplete="off">
+                    <form [formGroup]="contactForm" autocomplete="off" *ngIf="!emailSent">
                         <div class="row">
                             <div class="col-12 col-md-4">
                                 <div class="form-group">
@@ -46,6 +46,12 @@
                                         [inputId]="'fullName'"
                                         [theFormGroup]="contactForm">
                                     </app-ui-input>
+                                    <app-ui-form-error
+                                        [errorMsg]="'Please enter a valid full name.'"
+                                        [displayError]="isFormInvalid('fullName')"
+                                        [inputId]="'fullName'"
+                                        [theFormGroup]="contactForm">
+                                    </app-ui-form-error>
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
@@ -55,6 +61,12 @@
                                         [inputId]="'email'"
                                         [theFormGroup]="contactForm">
                                     </app-ui-input>
+                                    <app-ui-form-error
+                                        [errorMsg]="'Please enter a valid email address.'"
+                                        [displayError]="isFormInvalid('email')"
+                                        [inputId]="'email'"
+                                        [theFormGroup]="contactForm">
+                                    </app-ui-form-error>
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
@@ -64,6 +76,12 @@
                                         [inputId]="'subject'"
                                         [theFormGroup]="contactForm">
                                     </app-ui-input>
+                                    <app-ui-form-error
+                                        [errorMsg]="'Please enter a valid subject.'"
+                                        [displayError]="isFormInvalid('subject')"
+                                        [inputId]="'subject'"
+                                        [theFormGroup]="contactForm">
+                                    </app-ui-form-error>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -73,6 +91,12 @@
                                         [inputId]="'message'"
                                         [theFormGroup]="contactForm">
                                     </app-ui-text-area>
+                                    <app-ui-form-error
+                                        [errorMsg]="'Please enter a valid message. It cannot be empty.'"
+                                        [displayError]="isFormInvalid('message')"
+                                        [inputId]="'message'"
+                                        [theFormGroup]="contactForm">
+                                    </app-ui-form-error>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -83,6 +107,14 @@
                             </div>
                         </div>
                     </form>
+                    <div class="row" *ngIf="emailSent">
+                        <div class="col-12">
+                            <app-ui-button
+                                [buttonText]="'New Email'"
+                                (buttonClicked)="onNewEmail()">
+                            </app-ui-button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -36,31 +36,31 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
     public carouselItems: any[] = [
         {
-            id: 1,
+            id: "1",
             imgLink: '../../../assets/img/bg-img/slide1.jpg',
             title: 'Title_1',
             content: 'Content_1'
         },
         {
-            id: 2,
+            id: "2",
             imgLink: '../../../assets/img/bg-img/slide2.jpg',
             title: 'Title_1',
             content: 'Content_1'
         },
         {
-            id: 3,
+            id: "3",
             imgLink: '../../../assets/img/bg-img/slide3.jpg',
             title: 'Title_1',
             content: 'Content_1'
         },
         {
-            id: 4,
+            id: "4",
             imgLink: '../../../assets/img/bg-img/slide4.jpg',
             title: 'Title_1',
             content: 'Content_1'
         },
         {
-            id: 5,
+            id: "5",
             imgLink: '../../../assets/img/bg-img/slide4.jpg',
             title: 'Title_1',
             content: 'Content_1'
