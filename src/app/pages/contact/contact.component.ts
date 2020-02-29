@@ -26,7 +26,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
 
     ngAfterViewInit() {
         window.scroll(0,0);
-        new WOW().init();
+        new WOW({live: false}).init();
     }
 
     public initiateForm() {
@@ -53,7 +53,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
         });
     }
 
-    public onSendEmail() {
+    public onSendMessage() {
         if (this.contactForm.valid) {
             let url = `https://us-central1-carpincullo-22333.cloudfunctions.net/emailMessage`;
             let headers = new HttpHeaders({
@@ -91,7 +91,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
         return body;
     }
 
-    public onNewEmail() {
+    public onNewMessage() {
         this.emailSent = false;
         this.contactForm.reset();
     }

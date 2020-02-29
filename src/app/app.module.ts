@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAnalyticsModule, ScreenTrackingService } from '@angular/fire/analytics';
 
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
@@ -35,9 +36,12 @@ const config = {
         SharedModule,
         AngularFireModule.initializeApp(config),
         AngularFireStorageModule,
-        AngularFirestoreModule
+        AngularFirestoreModule,
+        AngularFireAnalyticsModule
     ],
-    providers: [],
+    providers: [
+        ScreenTrackingService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

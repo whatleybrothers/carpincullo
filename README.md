@@ -15,7 +15,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Live app
-Open https://carpincullo.firebaseapp.com in browser
+Open https://carpincullo-22333.firebaseapp.com in browser
 
 ## Running unit tests
 

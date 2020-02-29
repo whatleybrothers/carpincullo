@@ -31,13 +31,13 @@
     <div class="container" #contactSection>
         <div class="row">
             <!-- Contact Form Area -->
-            <div class="col-12">
+            <div class="col-12" *ngIf="!emailSent">
                 <div class="contact-form text-center">
 
                     <h2>I am an experienced photographer</h2>
                     <h4>Let’s talk</h4>
 
-                    <form [formGroup]="contactForm" autocomplete="off" *ngIf="!emailSent">
+                    <form [formGroup]="contactForm" autocomplete="off">
                         <div class="row">
                             <div class="col-12 col-md-4">
                                 <div class="form-group">
@@ -101,17 +101,24 @@
                             </div>
                             <div class="col-12">
                                 <app-ui-button
-                                    [buttonText]="'Send Email'"
-                                    (buttonClicked)="onSendEmail()">
+                                    [buttonText]="'Send Message'"
+                                    (buttonClicked)="onSendMessage()">
                                 </app-ui-button>
                             </div>
                         </div>
                     </form>
-                    <div class="row" *ngIf="emailSent">
+                </div>
+            </div>
+            <div class="col-12" *ngIf="emailSent">
+                <div class="contact-form text-center">
+                    <h2>Your message has been sent.</h2>
+                    <h4>We will reach back to you as soon as possible.</h4>
+
+                    <div class="row">
                         <div class="col-12">
                             <app-ui-button
-                                [buttonText]="'New Email'"
-                                (buttonClicked)="onNewEmail()">
+                                [buttonText]="'New Message'"
+                                (buttonClicked)="onNewMessage()">
                             </app-ui-button>
                         </div>
                     </div>
