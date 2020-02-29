@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { WOW } from 'wowjs/dist/wow.min';
 
@@ -66,7 +67,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
         }
     ];
 
-    constructor() {
+    constructor(private router: Router) {
     }
 
     ngOnInit() {
@@ -76,6 +77,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
     ngAfterViewInit() {
         window.scroll(0,0);
         new WOW().init();
+    }
+
+    public onContactMe() {
+        this.router.navigate(['/contact']);
     }
 
 }

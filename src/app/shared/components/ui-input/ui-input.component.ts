@@ -25,7 +25,7 @@ export class UiInputComponent implements OnInit {
         this.placeHolderText = this.placeHolderText || '';
     }
 
-    public clearInput() {
-        this.theFormGroup.get(this.inputId).setValue('');
-    }
+    // public clearInput() {
+    //     this.theFormGroup.get(this.inputId).setValue('');
+    // }
 }

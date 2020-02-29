@@ -13,7 +13,8 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel tortor facilisis, volutpat nulla placerat, tincidunt mi. Nullam vel orci dui.</p>
                     <app-ui-button
                         [additionalClasses]="'white-btn'"
-                        [buttonText]="'Contact Me'">
+                        [buttonText]="'Contact Me'"
+                        (buttonClicked)="onContactMe()">
                     </app-ui-button>
                 </div>
             </div>
@@ -27,7 +28,7 @@
         <img class="dots" src="../../../assets/img/core-img/dots.png" alt="">
     </div>
 
-    <div class="container">
+    <div class="container" #contactSection>
         <div class="row">
             <!-- Contact Form Area -->
             <div class="col-12">
@@ -76,7 +77,8 @@
                             </div>
                             <div class="col-12">
                                 <app-ui-button
-                                    [buttonText]="'Contact Me'">
+                                    [buttonText]="'Send Email'"
+                                    (buttonClicked)="onSendEmail()">
                                 </app-ui-button>
                             </div>
                         </div>
