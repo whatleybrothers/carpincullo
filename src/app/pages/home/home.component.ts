@@ -76,7 +76,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
     ngAfterViewInit() {
         window.scroll(0,0);
-        new WOW().init();
+        new WOW({live: false}).init();
     }
 
     public onContactMe() {
