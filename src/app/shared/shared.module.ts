@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
@@ -21,6 +22,7 @@ import { UiTextAreaComponent } from './components/ui-text-area/ui-text-area.comp
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
+        HttpClientModule,
         // NgbModule,
         CarouselModule
     ],

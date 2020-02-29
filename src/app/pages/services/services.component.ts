@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { WOW } from 'wowjs/dist/wow.min';
 
 @Component({
@@ -8,7 +9,7 @@ import { WOW } from 'wowjs/dist/wow.min';
 })
 export class ServicesComponent implements OnInit, AfterViewInit {
 
-    constructor() { }
+    constructor(private router: Router) { }
 
     ngOnInit() {
     }
@@ -18,4 +19,7 @@ export class ServicesComponent implements OnInit, AfterViewInit {
         new WOW().init();
     }
 
+    public onContactMe() {
+        this.router.navigate(['/contact']);
+    }
 }

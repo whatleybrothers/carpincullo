@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { WOW } from 'wowjs/dist/wow.min';
 import { PaginationService } from '../../core/services/pagination.service';
 
@@ -9,7 +10,8 @@ import { PaginationService } from '../../core/services/pagination.service';
 })
 export class PortafolioComponent implements OnInit, AfterViewInit {
 
-    constructor(public paginationService: PaginationService) { }
+    constructor(public paginationService: PaginationService,
+        private router: Router) { }
 
     ngOnInit() {
         this.paginationService.init('gallaryGroupTest', 'created', { reverse: false, prepend: false })
@@ -22,5 +24,10 @@ export class PortafolioComponent implements OnInit, AfterViewInit {
 
     public onLoadMore() {
         this.paginationService.more()
+    }
+
+    public onContactMe() {
+        this.router.navigate(['/contact']);
+
     }
 }

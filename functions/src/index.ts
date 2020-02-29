@@ -20,10 +20,10 @@ async function sendApplicationEmail(body: any) {
 
     const msg = {
         to: ['awhatleybrothers@gmail.com'],
-        from: 'awhatleybrothers@gmail.com',
-        subject: 'Mensage the Carpincullo',
+        from: body.from,
+        subject: body.subject,
         templateId: 'd-8dce53ecd4c747d8a6e0db754226b5bb',
-        dynamic_template_data: body,
+        dynamic_template_data: body.content,
     };
     await sgMail.send(msg)
     console.log('Email was sent...');
