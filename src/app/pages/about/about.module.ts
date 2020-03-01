@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AboutRoutingModule } from './about-routing.module';
 import { SharedModule } from '../../shared/shared.module';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 import { AboutComponent } from './about.component';
 
@@ -13,7 +14,8 @@ import { AboutComponent } from './about.component';
     imports: [
         CommonModule,
         AboutRoutingModule,
-        SharedModule
+        SharedModule,
+        NgCircleProgressModule.forRoot()
     ],
     exports: [
         AboutComponent

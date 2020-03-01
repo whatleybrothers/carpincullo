@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 
-import {PaginationService} from './services/pagination.service';
+import { PaginationService } from './services/pagination.service';
 
 @NgModule({
     declarations: [

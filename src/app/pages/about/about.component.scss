@@ -210,7 +210,6 @@
     }
     p {
         margin-bottom: 0;
-
     }
     .barfiller {
         background-color: #e0e0e0;
@@ -244,6 +243,13 @@
         }
         .tipWrap {
             display: none;
+        }
+    }
+    .progress {
+        height: 2px;
+        background-color: #e0e0e0;
+        .progress-bar {
+            background: rgb(29, 29, 29);
         }
     }
 }
