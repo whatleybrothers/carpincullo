@@ -9,6 +9,36 @@ import { WOW } from 'wowjs/dist/wow.min';
 })
 export class AboutComponent implements OnInit, AfterViewInit {
 
+    public progressBars: any[] = [
+        {
+            name: 'Creativity',
+            value: 80,
+        },
+        {
+            name: 'Pacience',
+            value: 90,
+        },
+        {
+            name: 'Commited',
+            value: 100,
+        }
+    ];
+
+    public progressCircles: any[] = [
+        {
+            name: 'Landsacpes',
+            value: 80,
+        },
+        {
+            name: 'Portraits',
+            value: 90,
+        },
+        {
+            name: 'Studio',
+            value: 100,
+        }
+    ];
+
     constructor(private router: Router) {
     }
 
@@ -17,7 +47,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
     ngAfterViewInit() {
         window.scroll(0, 0);
-        new WOW({live: false}).init();
+        new WOW({ live: false }).init();
     }
 
     public onContactMe() {
