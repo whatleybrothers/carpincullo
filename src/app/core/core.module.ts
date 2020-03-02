@@ -21,7 +21,7 @@ import { PaginationService } from './services/pagination.service';
     exports: [
         NavbarComponent,
         FooterComponent,
-        BrowserAnimationsModule
+        // BrowserAnimationsModule
         // RouterModule
     ],
     providers: [

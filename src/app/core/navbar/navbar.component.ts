@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {fromEvent, interval, Observable, Subscription, timer} from 'rxjs';
+import { fromEvent } from 'rxjs';
 
 @Component({
     selector: 'app-navbar',

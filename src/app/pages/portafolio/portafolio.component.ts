@@ -14,6 +14,7 @@ export class PortafolioComponent implements OnInit, AfterViewInit {
         private router: Router) { }
 
     ngOnInit() {
+        this.paginationService.reset();
         this.paginationService.init('gallaryGroupTest', 'created', { reverse: false, prepend: false })
     }
 
@@ -28,6 +29,5 @@ export class PortafolioComponent implements OnInit, AfterViewInit {
 
     public onContactMe() {
         this.router.navigate(['/contact']);
-
     }
 }
