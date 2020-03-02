@@ -9,14 +9,12 @@
         <a [routerLink]="['/home']">Carpincullo</a>
     </div>
     <!-- Nav -->
-    <div class="sonarNav wow fadeInUp" data-wow-delay="1s">
+    <div class="sonarNav" data-wow-delay="1s">
         <nav>
             <ul>
-                <ng-container *ngFor="let lnk of links">
-                    <li class="nav-item">
-                        <a class="nav-link" [routerLink]="[lnk.link]" (click)="hideMenu()">{{lnk.name}}</a>
-                    </li>
-                </ng-container>
+                <li class="nav-item" *ngFor="let lnk of links">
+                    <a class="nav-link" [routerLink]="[lnk.link]" (click)="hideMenu()">{{lnk.name}}</a>
+                </li>
             </ul>
         </nav>
     </div>

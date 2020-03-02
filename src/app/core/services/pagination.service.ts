@@ -37,19 +37,19 @@ export class PaginationService {
         this.query = {
             path,
             field,
-            limit: 2,
+            limit: 4,
             reverse: false,
             prepend: false,
             ...opts
-        }
+        };
 
         const first = this.store.collection(this.query.path, ref => {
             return ref
                 .orderBy(this.query.field, this.query.reverse ? 'desc' : 'asc')
-                .limit(this.query.limit)
-        })
+                .limit(this.query.limit);
+        });
 
-        this.mapAndUpdate(first)
+        this.mapAndUpdate(first);
 
         // Create the observable array for consumption in components
         this.data = this._data.asObservable()
@@ -57,7 +57,7 @@ export class PaginationService {
                 scan((acc, val) => {
                     return this.query.prepend ? val.concat(acc) : acc.concat(val)
                 })
-            )
+            );
     }
 
 
@@ -69,19 +69,19 @@ export class PaginationService {
             return ref
                 .orderBy(this.query.field, this.query.reverse ? 'desc' : 'asc')
                 .limit(this.query.limit)
-                .startAfter(cursor)
+                .startAfter(cursor);
         })
-        this.mapAndUpdate(more)
+        this.mapAndUpdate(more);
     }
 
 
     // Determines the doc snapshot to paginate query
     private getCursor() {
-        const current = this._data.value
+        const current = this._data.value;
         if (current.length) {
-            return this.query.prepend ? current[0].doc : current[current.length - 1].doc
+            return this.query.prepend ? current[0].doc : current[current.length - 1].doc;
         }
-        return null
+        return null;
     }
 
 
@@ -91,7 +91,7 @@ export class PaginationService {
         if (this._done.value || this._loading.value) { return };
 
         // loading
-        this._loading.next(true)
+        this._loading.next(true);
 
         // Map snapshot with doc ref (needed for cursor)
         return col.snapshotChanges()
@@ -119,14 +119,13 @@ export class PaginationService {
                     }
                 }),
                 take(1)
-            ).subscribe()
-
+            ).subscribe();
     }
 
 
     // Reset the page
     reset() {
-        this._data.next([])
-        this._done.next(false)
+        this._data.next([]);
+        this._done.next(false);
     }
 }
