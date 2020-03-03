@@ -1,5 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 
+
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -7,9 +8,13 @@ import { Component, AfterViewInit } from '@angular/core';
 })
 export class AppComponent implements AfterViewInit {
 
-    // public showLoader: boolean = true;
+    public showLoader: boolean = true;
+
+    constructor() { }
 
     ngAfterViewInit() {
-        // this.showLoader = false;
+        setTimeout(() => {
+            this.showLoader = false;
+        }, 300);
     }
 }

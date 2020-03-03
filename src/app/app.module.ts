@@ -5,12 +5,14 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAnalyticsModule, ScreenTrackingService } from '@angular/fire/analytics';
+import { StoreModule } from '@ngrx/store';
 
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EffectsModule } from '@ngrx/effects';
 
 const config = {
     apiKey: "AIzaSyApeBEzL7Vzy39dPJXd6uIs2B7BedNIp8c",
@@ -37,7 +39,9 @@ const config = {
         AngularFireModule.initializeApp(config),
         AngularFireStorageModule,
         AngularFirestoreModule,
-        AngularFireAnalyticsModule
+        AngularFireAnalyticsModule,
+        StoreModule.forRoot({}),
+        EffectsModule.forRoot([])
     ],
     providers: [
         ScreenTrackingService
