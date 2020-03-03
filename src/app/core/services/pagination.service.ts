@@ -24,7 +24,7 @@ export class PaginationService {
     private query: QueryConfig;
 
     // Observable data
-    data: Observable<any>;
+    // data: Observable<any>;
     done: Observable<boolean> = this._done.asObservable();
     loading: Observable<boolean> = this._loading.asObservable();
 
@@ -52,7 +52,7 @@ export class PaginationService {
         this.mapAndUpdate(first);
 
         // Create the observable array for consumption in components
-        this.data = this._data.asObservable()
+        return this._data.asObservable()
             .pipe(
                 scan((acc, val) => {
                     return this.query.prepend ? val.concat(acc) : acc.concat(val)
@@ -72,6 +72,13 @@ export class PaginationService {
                 .startAfter(cursor);
         })
         this.mapAndUpdate(more);
+
+        return this._data.asObservable()
+            .pipe(
+                scan((acc, val) => {
+                    return this.query.prepend ? val.concat(acc) : acc.concat(val)
+                })
+            );
     }
 
 
