@@ -13,8 +13,8 @@ export class ContactComponent implements OnInit, AfterViewInit {
 
     public contactForm: FormGroup;
     public emailSent: boolean = false;
+    public sendingMessage: boolean = false;
     @ViewChild('contactSection', {static: false}) contactSection: ElementRef;
-
 
     constructor(private fb: FormBuilder,
         private httpClient: HttpClient) { }
@@ -63,13 +63,15 @@ export class ContactComponent implements OnInit, AfterViewInit {
 
             const body = this.getBodyContent();
 
+            this.sendingMessage = true;
             this.httpClient.post(url, body, { headers })
                 .subscribe((res) => {
                     console.log(res);
                     this.emailSent = true;
+                    this.sendingMessage = false;
                 }, (err) => {
                     console.log(err);
-                    this.emailSent = false;
+                    this.sendingMessage = false;
                 });
         } else {
             Object.keys(this.contactForm.controls).forEach((key) => {
