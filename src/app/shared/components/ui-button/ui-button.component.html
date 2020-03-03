@@ -5,11 +5,14 @@
         [disabled]="inProgress || isDisabled"
         (click)="emitClickAction()">
     <div class="button-content">
-        <!-- <ui-spinner
-            *ngIf="inProgress"
-            [colorClass]="'cw-very-dark-gray'"
-            [size]="'sm'">
-        </ui-spinner> -->
+        <div class="sk-chase" *ngIf="inProgress">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+          </div>
         <span class="button-text {{textClass}}" [innerHTML]="buttonText"></span>
         <!-- <i *ngIf="iconClass" class="button-icon fa {{iconClass}}" aria-hidden="true"></i> -->
     </div>
